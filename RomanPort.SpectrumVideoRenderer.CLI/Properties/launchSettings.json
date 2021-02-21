@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "RomanPort.SpectrumVideoRenderer.CLI": {
+      "commandName": "Project",
+      "commandLineArgs": "debug.sdpf"
+    }
+  }
+}

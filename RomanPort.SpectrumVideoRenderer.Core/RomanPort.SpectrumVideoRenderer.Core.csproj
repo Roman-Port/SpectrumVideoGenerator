@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Framework\FontPacks\SYSTEM_BOLD_10.sdrf" />
+    <None Remove="Framework\FontPacks\SYSTEM_BOLD_15.sdrf" />
+    <None Remove="Framework\FontPacks\SYSTEM_BOLD_20.sdrf" />
+    <None Remove="Framework\FontPacks\SYSTEM_REGULAR_10.sdrf" />
+    <None Remove="Framework\FontPacks\SYSTEM_REGULAR_15.sdrf" />
+    <None Remove="Framework\FontPacks\SYSTEM_REGULAR_20.sdrf" />
+    <None Remove="Framework\Text\Data\FONT_SYSTEM_BOLD_12.sdrfnt" />
+    <None Remove="Framework\Text\Data\FONT_SYSTEM_REGULAR_10.sdrfnt" />
+    <None Remove="Framework\Text\Data\FONT_SYSTEM_REGULAR_12.sdrfnt" />
+    <None Remove="Framework\Text\Data\FONT_SYSTEM_REGULAR_15.sdrfnt" />
+    <None Remove="Framework\Text\Data\FONT_SYSTEM_REGULAR_20.sdrfnt" />
+    <None Remove="Framework\Text\Data\FONT_SYSTEM_REGULAR_8.sdrfnt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Framework\FontPacks\SYSTEM_BOLD_10.sdrf" />
+    <EmbeddedResource Include="Framework\FontPacks\SYSTEM_BOLD_15.sdrf" />
+    <EmbeddedResource Include="Framework\FontPacks\SYSTEM_BOLD_20.sdrf" />
+    <EmbeddedResource Include="Framework\FontPacks\SYSTEM_REGULAR_10.sdrf" />
+    <EmbeddedResource Include="Framework\FontPacks\SYSTEM_REGULAR_15.sdrf" />
+    <EmbeddedResource Include="Framework\FontPacks\SYSTEM_REGULAR_20.sdrf" />
+    <EmbeddedResource Include="Framework\Text\Data\FONT_SYSTEM_BOLD_12.sdrfnt" />
+    <EmbeddedResource Include="Framework\Text\Data\FONT_SYSTEM_REGULAR_10.sdrfnt" />
+    <EmbeddedResource Include="Framework\Text\Data\FONT_SYSTEM_REGULAR_12.sdrfnt" />
+    <EmbeddedResource Include="Framework\Text\Data\FONT_SYSTEM_REGULAR_15.sdrfnt" />
+    <EmbeddedResource Include="Framework\Text\Data\FONT_SYSTEM_REGULAR_8.sdrfnt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\RomanPort.SimpleFontRenderer\RomanPort.SimpleFontRenderer\RomanPort.SimpleFontRenderer.csproj" />
+    <ProjectReference Include="..\..\SDR\RomanPort.LibSDR\RomanPort.LibSDR\RomanPort.LibSDR.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+</Project>
